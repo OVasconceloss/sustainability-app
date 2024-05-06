@@ -14,12 +14,12 @@ export default function ProfileScreen() {
     <View style={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', backgroundColor: '#F5F7F8'}}>
       {/* HEADER */}
       <View style={profileStyle.headerProfile}>
-        <View style={[profileStyle.headerProfileBox, profileStyle.shadow]}>
-          <Text style={profileStyle.headerTitle}>Profile</Text>
+        <View style={[profileStyle.headerProfileTitleBox, profileStyle.shadow]}>
+          <Text style={profileStyle.headerProfileTitle}>Profile</Text>
         </View>
       </View>
       {/* MAIN */}
-      <View style={{width: '100%', paddingLeft: 50, paddingRight: 50, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+      <View style={profileStyle.profileDataText}>
         <View>
           <Image
             source={require('../../../assets/images/Home/earthRotation.gif')}
@@ -27,16 +27,24 @@ export default function ProfileScreen() {
           />
         </View>
         <View>
-          <Text>Username: Victor</Text>
-          <Text>Here since: 2024</Text>
-          <Text>Quizzes Dones: 2</Text>
+          <Text style={{padding: 5, fontSize: 20, letterSpacing: 0.5}}>Username: Victor</Text>
+          <Text style={{padding: 5, fontSize: 20, letterSpacing: 0.5}}>Here since: 2024</Text>
+          <Text style={{padding: 5, fontSize: 20, letterSpacing: 0.5}}>Quizzes Done: 2</Text>
         </View>
       </View>
-      <View style={{borderColor: '#16A34A', borderWidth: 1, borderStartWidth: 350}}></View>
+      <View style={profileStyle.profileStyleLine}></View>
+      <Text style={{padding: 25, fontSize: 25}}>Achievements</Text>
       <View>
-        <Text style={{padding: 25, fontSize: 25}}>Achievements</Text>
-        <View>
-          <AchievementBox/>
+        <View style={profileStyle.achievementsGrid}>
+          <AchievementBox />
+          <AchievementBox />
+          <AchievementBox />
+          <AchievementBox />
+          <AchievementBox />
+          <AchievementBox />
+          <AchievementBox />
+          <AchievementBox />
+          <AchievementBox />
         </View>
       </View>
       {/* FOOTER */}

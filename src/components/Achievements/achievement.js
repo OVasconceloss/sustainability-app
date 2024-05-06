@@ -5,7 +5,7 @@ import {
 
 export default function AchievementBox() {
     return (
-        <View style={{width: 100, backgroundColor: '#000'}}>
+        <View style={{margin: 5, width: 100, height: 70, backgroundColor: '#000'}}>
             <Text>Conquista</Text>
         </View>
     )

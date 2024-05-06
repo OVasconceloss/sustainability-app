@@ -28,7 +28,7 @@ export default function FooterMenu() {
                 <Icon name="question" size={24} color="#16A34A" />
                 <Text style={footerMenuStyle.menuText}>Quizz</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={footerMenuStyle.menuItem}>
+            <TouchableOpacity style={footerMenuStyle.menuItem} onPress={() => navigation.navigate("Settings")}>
                 <Icon name="cog" size={24} color="#16A34A" />
                 <Text style={footerMenuStyle.menuText}>Settings</Text>
             </TouchableOpacity>

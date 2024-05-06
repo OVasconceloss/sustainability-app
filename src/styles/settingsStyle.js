@@ -2,19 +2,19 @@ import { StyleSheet, StatusBar } from "react-native";
 
 const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
 
-const profileStyle = StyleSheet.create({
-  headerProfile: {
+const settingsStyle = StyleSheet.create({
+  headerSettings: {
     display: 'flex',
     alignItems: 'center',
     paddingTop: statusBarHeight,
   },
-  headerProfileTitle: {
+  headerSettingsTitle: {
     padding: 5,
     fontSize: 50,
     color: '#16A34A',
     textAlign: 'center',
   },
-  profileDataText: {
+  settingsDataText: {
     width: '100%', 
     paddingLeft: 50, 
     paddingRight: 50, 
@@ -23,17 +23,11 @@ const profileStyle = StyleSheet.create({
     alignItems: 'center', 
     justifyContent: 'space-between'
   },
-  profileStyleLine: {
+  settingsStyleLine: {
     borderColor: '#16A34A', 
     borderWidth: 1, 
     borderStartWidth: 350
   },
-  achievementsGrid: {
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    paddingHorizontal: 20,
-    justifyContent: 'space-between',
-  },
 });
 
-export default profileStyle;
+export default settingsStyle;

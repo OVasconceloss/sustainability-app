@@ -8,25 +8,10 @@ const homeStyle = StyleSheet.create({
     alignItems: 'center',
     paddingTop: statusBarHeight,
   },
-  headerTitleBox: {
-    width: 350,
-    borderRadius: 50,
-    backgroundColor: '#16A34A',
-  },
-  shadow: {
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 5,
-      height: 100,
-    },
-    shadowOpacity: 0.50,
-    shadowRadius: 5,
-    elevation: 5,
-  },
   headerTitle: {
     padding: 5,
     fontSize: 50,
-    color: '#FFFFFF',
+    color: '#16A34A',
     textAlign: 'center',
   },
   mainTitle: {

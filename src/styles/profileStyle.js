@@ -8,7 +8,7 @@ const profileStyle = StyleSheet.create({
     alignItems: 'center',
     paddingTop: statusBarHeight,
   },
-  headerProfileBox: {
+  headerProfileTitleBox: {
     width: 350,
     borderRadius: 50,
     backgroundColor: '#16A34A',
@@ -23,16 +23,31 @@ const profileStyle = StyleSheet.create({
     shadowRadius: 5,
     elevation: 5,
   },
-  headerTitle: {
+  headerProfileTitle: {
     padding: 5,
     fontSize: 50,
     color: '#FFFFFF',
     textAlign: 'center',
   },
-  mainTitle: {
-    width: 300,
-    fontSize: 25,
-    textAlign: 'center',
+  profileDataText: {
+    width: '100%', 
+    paddingLeft: 50, 
+    paddingRight: 50, 
+    display: 'flex', 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    justifyContent: 'space-between'
+  },
+  profileStyleLine: {
+    borderColor: '#16A34A', 
+    borderWidth: 1, 
+    borderStartWidth: 350
+  },
+  achievementsGrid: {
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    paddingHorizontal: 20,
+    justifyContent: 'space-between',
   },
 });
 

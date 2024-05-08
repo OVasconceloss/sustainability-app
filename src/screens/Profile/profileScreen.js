@@ -14,7 +14,7 @@ export default function ProfileScreen() {
     <View style={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', backgroundColor: '#F5F7F8'}}>
       {/* HEADER */}
       <View style={profileStyle.headerProfile}>
-        <View style={[profileStyle.headerProfileTitleBox, profileStyle.shadow]}>
+        <View style={profileStyle.shadow}>
           <Text style={profileStyle.headerProfileTitle}>Profile</Text>
         </View>
       </View>

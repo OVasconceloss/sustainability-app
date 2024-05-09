@@ -18,7 +18,7 @@ export default function SettingsScreen() {
     <>
       {/* HEADER */}
       <View style={settingsStyle.headerSettings}>
-        <View style={[settingsStyle.headerSettingsTitleBox]}>
+        <View style={[settingsStyle.headerSettingsTitle]}>
           <Text style={settingsStyle.headerSettingsTitle}>Settings</Text>
         </View>
       </View>

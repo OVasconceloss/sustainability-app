@@ -120,6 +120,9 @@ export default function QuestionsScreen() {
               style={{ width: "80%", marginTop: 20, borderColor: "#16A34A", color: "#16A34A" }}
             />
           </View>
+          <TouchableOpacity style={questionStyle.quitQuizButton} onPress={() => navigation.navigate("Home")}>
+            <Text style={questionStyle.quitButtonText}>Quit the Quiz</Text>
+          </TouchableOpacity>
         </View>
       );
 };

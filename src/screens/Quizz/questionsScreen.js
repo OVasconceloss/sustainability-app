@@ -97,6 +97,9 @@ export default function QuestionsScreen() {
                 style={{
                   padding: 15,
                   width: 300,
+                  height: 70,
+                  display: 'flex',
+                  justifyContent: 'center',
                   marginVertical: 10,
                   borderRadius: 9,
                   backgroundColor:

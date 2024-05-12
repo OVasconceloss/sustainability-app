@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
     View,
     Text,
@@ -64,17 +64,24 @@ const questions = [
 export default function QuestionsScreen() {
     const navigation = useNavigation();
 
+    const [wrongAnswers, setWrongAnswers] = useState([]);
+    const [correctAnswers, setCorrectAnswers] = useState([]);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
   
     const handleAnswer = (answer) => {
       setSelectedAnswer(answer);
       setTimeout(handleNextQuestion, 500);
+      if (answer === questions[currentQuestion].correctAnswer) {
+        setCorrectAnswers([...correctAnswers, currentQuestion]);
+      } else {
+        setWrongAnswers([...wrongAnswers, currentQuestion]);
+      }
     };
   
     const handleNextQuestion = () => {
       if (currentQuestion === questions.length - 1) {
-        navigation.navigate("Home");
+        navigation.navigate("ResultScreen", {correctAnswers, wrongAnswers});
       } else {
         setCurrentQuestion((prevQuestion) => prevQuestion + 1);
         setSelectedAnswer(null);

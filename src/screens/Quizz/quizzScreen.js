@@ -6,6 +6,7 @@ import {
 } from "react-native";
 import quizzStyle from "../../styles/quizzStyle";
 import FooterMenu from "../../components/FooterMenu/footerMenu";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function QuizzScreen() {
     return (
@@ -18,11 +19,15 @@ export default function QuizzScreen() {
             <View style={quizzStyle.mainRulesBox}>
                 <View style={quizzStyle.ruleBox}>
                     <Text style={quizzStyle.ruleBoxText}>Right Answers: </Text>
-                    <Text style={quizzStyle.ruleBoxValue}>1</Text>
+                    <Text style={quizzStyle.ruleBoxValue}>
+                        <Icon name="check" size={24} color="#FFFFFF" />
+                    </Text>
                 </View>
                 <View style={quizzStyle.ruleBox}>
                     <Text style={quizzStyle.ruleBoxText}>Wrong Answers: </Text>
-                    <Text style={[quizzStyle.ruleBoxValue, quizzStyle.ruleBoxValueWrong]}>1</Text>
+                    <Text style={[quizzStyle.ruleBoxValue, quizzStyle.ruleBoxValueWrong]}>
+                        <Icon name="close" size={24} color="#FFFFFF" />
+                    </Text>
                 </View>
             </View>
         </View>

@@ -2,10 +2,9 @@ import React from "react";
 import {
   View,
   Text,
-  Image,
 } from "react-native";
 import settingsStyle from "../../styles/settingsStyle";
-import FooterMenu from "../../components/Footer/footerMenu";
+import FooterMenu from "../../components/FooterMenu/footerMenu";
 import DropdownChoice from "../../components/DropDownChoices/dropdownChoice";
 
 export default function SettingsScreen() {
@@ -24,8 +23,8 @@ export default function SettingsScreen() {
       </View>
       {/* MAIN */}
       <View>
-          <View>{/*uma div para caixa de botões*/}
-            <View>{/*uma div para botão*/}
+          <View>
+            <View>
               <DropdownChoice label="Language" options={languageOptions} />
             </View>
           </View>

@@ -5,7 +5,7 @@ import {
   Image,
 } from "react-native";
 import profileStyle from "../../styles/profileStyle";
-import FooterMenu from "../../components/Footer/footerMenu";
+import FooterMenu from "../../components/FooterMenu/footerMenu";
 import AchievementBox from "../../components/Achievements/achievement";
 
 export default function ProfileScreen() {

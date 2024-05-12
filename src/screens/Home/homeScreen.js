@@ -5,7 +5,7 @@ import {
   Image,
 } from "react-native";
 import homeStyle from "../../styles/homeStyle";
-import FooterMenu from "../../components/Footer/footerMenu";
+import FooterMenu from "../../components/FooterMenu/footerMenu";
 
 export default function HomeScreen() {
   return (

@@ -25,7 +25,7 @@ const quizzStyle = StyleSheet.create({
     padding: 10
   },
   mainRulesBox: {
-    marginTop: 30,
+    marginTop: 10,
   },
   ruleBox: {
     width: '100%',

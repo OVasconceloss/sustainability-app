@@ -113,7 +113,7 @@ export default function QuestionsScreen() {
             <ProgressBarAndroid
               styleAttr="Horizontal"
               indeterminate={false}
-              progress={(currentQuestion + 1) / questions.length}
+              progress={currentQuestion / (questions.length - 1)}
               style={{ width: "80%", marginTop: 20, borderColor: "#16A34A", color: "#16A34A" }}
             />
           </View>

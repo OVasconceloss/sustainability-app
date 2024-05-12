@@ -6,6 +6,7 @@ import {
     ProgressBarAndroid
 } from "react-native";
 import questionStyle from "../../styles/quetionsStyle";
+import { useNavigation } from "@react-navigation/native";
 
 const questions = [
     {
@@ -61,17 +62,23 @@ const questions = [
 ]
 
 export default function QuestionsScreen() {
+    const navigation = useNavigation();
+
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
   
     const handleAnswer = (answer) => {
       setSelectedAnswer(answer);
-      setTimeout(handleNextQuestion, 1000);
+      setTimeout(handleNextQuestion, 500);
     };
   
     const handleNextQuestion = () => {
-      setCurrentQuestion((prevQuestion) => prevQuestion + 1);
-      setSelectedAnswer(null);
+      if (currentQuestion === questions.length - 1) {
+        navigation.navigate("Home");
+      } else {
+        setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+        setSelectedAnswer(null);
+      }
     };
 
     return (

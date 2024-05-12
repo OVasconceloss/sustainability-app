@@ -71,17 +71,17 @@ export default function QuestionsScreen() {
   
     const handleAnswer = (answer) => {
       setSelectedAnswer(answer);
-      setTimeout(handleNextQuestion, 500);
       if (answer === questions[currentQuestion].correctAnswer) {
         setCorrectAnswers([...correctAnswers, currentQuestion]);
       } else {
         setWrongAnswers([...wrongAnswers, currentQuestion]);
       }
+      setTimeout(handleNextQuestion, 500);
     };
   
     const handleNextQuestion = () => {
       if (currentQuestion === questions.length - 1) {
-        navigation.navigate("ResultScreen", {correctAnswers, wrongAnswers});
+        navigation.navigate("Result", {correctAnswers, wrongAnswers});
       } else {
         setCurrentQuestion((prevQuestion) => prevQuestion + 1);
         setSelectedAnswer(null);

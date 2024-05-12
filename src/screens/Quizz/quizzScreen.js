@@ -7,8 +7,11 @@ import {
 import quizzStyle from "../../styles/quizzStyle";
 import FooterMenu from "../../components/FooterMenu/footerMenu";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from "@react-navigation/native";
 
 export default function QuizzScreen() {
+    const navigation = useNavigation();
+    
     return (
         <>
         <View style={quizzStyle.headerQuizz}>
@@ -34,7 +37,7 @@ export default function QuizzScreen() {
         <View style={quizzStyle.informationTextBox}>
             <Text style={quizzStyle.informationText}>Get all five questions right in order to complete the quiz.</Text>
             <Text style={quizzStyle.informationText}>Come back tomorrow for a new test!</Text>
-            <TouchableOpacity style={quizzStyle.startButton}>
+            <TouchableOpacity style={quizzStyle.startButton} onPress={() => navigation.navigate("Questions")}>
                 <Text style={quizzStyle.startButtonText}>Start Quizz</Text>
             </TouchableOpacity>
         </View>

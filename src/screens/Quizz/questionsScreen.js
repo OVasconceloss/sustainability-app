@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
     View,
-    Text
+    Text,
+    TouchableOpacity,
+    ProgressBarAndroid
 } from "react-native";
+import questionStyle from "../../styles/quetionsStyle";
 
 const questions = [
     {
@@ -50,16 +53,81 @@ const questions = [
         answers: [
             "1. To ensure there is no competition between species",
             "2. To accelerate the process of species extinction",
-            "3. To increase the quantity of consumer products available ",
-            "4. To keep ecosystems healthy and functioning properly "
+            "3. To increase the quantity of consumer products available",
+            "4. To keep ecosystems healthy and functioning properly"
         ],
         correctAnswer: "4. To keep ecosystems healthy and functioning properly"
     },
 ]
 
 export default function QuestionsScreen() {
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const [showNextQuestionButton, setShowNextQuestionButton] = useState(false);
+  
+    useEffect(() => {
+      if (selectedAnswer !== null) {
+        const correctAnswer = questions[currentQuestion].correctAnswer;
+        const timeout = setTimeout(() => {
+          if (selectedAnswer === correctAnswer) {
+            handleNextQuestion();
+          }
+        }, 2000);
+  
+        return () => clearTimeout(timeout);
+      }
+    }, [selectedAnswer]);
+  
+    const handleAnswer = (answer) => {
+      setSelectedAnswer(answer);
+    };
+  
+    const handleNextQuestion = () => {
+      if (currentQuestion < questions.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+        setSelectedAnswer(null);
+        setShowNextQuestionButton(false);
+      } else {
+        //END QUIZ
+      }
+    };
+
     return (
         <>
+        <View>
+            <View style={questionStyle.headerQuestion}>
+                <Text style={questionStyle.headerQuestionTitle}>Quizz</Text>
+            </View>
+            <View style={{marginTop: 50, display: 'flex', alignItems: 'center'}}>
+                <Text style={questionStyle.questionText}>{questions[currentQuestion].question}</Text>
+                {questions[currentQuestion].answers.map((answer, index) => (
+                    <TouchableOpacity
+                        key={index}
+                        onPress={() => handleAnswer(answer)}
+                        style={{
+                            padding: 15,
+                            width: 300,
+                            marginVertical: 10,
+                            borderRadius: 9,
+                            backgroundColor: answer === selectedAnswer
+                            ? answer === questions[currentQuestion].correctAnswer
+                            ? "green"
+                            : "red"
+                            : "white",
+                        }}>
+                            <Text>{answer}</Text>
+                        </TouchableOpacity>
+                    ))}
+                    {selectedAnswer && (
+                        <ProgressBarAndroid
+                            styleAttr="Horizontal"
+                            indeterminate={false}
+                            progress={(currentQuestion + 1) / questions.length}
+                            style={{ width: "80%", marginTop: 20, borderColor: "#16A34A", color: '#16A34A'}}
+                        />
+                    )}
+            </View>
+        </View>
         </>
     );
 };

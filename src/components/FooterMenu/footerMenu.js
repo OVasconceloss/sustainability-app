@@ -16,10 +16,6 @@ export default function FooterMenu() {
                 <Icon name="home" size={24} color="#16A34A" />
                 <Text style={footerMenuStyle.menuText}>Home</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={footerMenuStyle.menuItem} onPress={() => navigation.navigate("Profile")}>
-                <Icon name="user" size={24} color="#16A34A" />
-                <Text style={footerMenuStyle.menuText}>Profile</Text>
-            </TouchableOpacity>
             <TouchableOpacity style={footerMenuStyle.menuItem} onPress={() => navigation.navigate("News")}>
                 <Icon name="newspaper-o" size={24} color="#16A34A" />
                 <Text style={footerMenuStyle.menuText}>News</Text>

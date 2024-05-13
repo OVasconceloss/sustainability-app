@@ -2,12 +2,11 @@ import HomeScreen from "./src/screens/Home/homeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import QuizzScreen from "./src/screens/Quizz/quizzScreen";
-import ProfileScreen from "./src/screens/Profile/profileScreen";
 import NewsScreen from "./src/screens/News/newsScreen";
-import SettingsScreen from "./src/screens/Settings/settingsScreen";
+import QuizzScreen from "./src/screens/Quizz/quizzScreen";
 import ResultScreen from "./src/screens/Quizz/quizzResultScreen";
 import QuestionsScreen from "./src/screens/Quizz/questionsScreen";
+import SettingsScreen from "./src/screens/Settings/settingsScreen";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -18,11 +17,6 @@ export default function App() {
           name="Home"
           component={HomeScreen}
           options={{ headerShown: false }}  
-        />
-        <Stack.Screen
-          name="Profile"
-          component={ProfileScreen}
-          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Settings"

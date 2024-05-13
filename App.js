@@ -6,8 +6,8 @@ import QuizzScreen from "./src/screens/Quizz/quizzScreen";
 import ProfileScreen from "./src/screens/Profile/profileScreen";
 import NewsScreen from "./src/screens/News/newsScreen";
 import SettingsScreen from "./src/screens/Settings/settingsScreen";
+import ResultScreen from "./src/screens/Quizz/quizzResultScreen";
 import QuestionsScreen from "./src/screens/Quizz/questionsScreen";
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -37,6 +37,11 @@ export default function App() {
         <Stack.Screen
           name="Questions"
           component={QuestionsScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Result"
+          component={ResultScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

@@ -76,17 +76,23 @@ export default function QuestionsScreen() {
       } else {
         setWrongAnswers([...wrongAnswers, currentQuestion]);
       }
-      setTimeout(handleNextQuestion, 500);
+      setTimeout(handleNextQuestion, 1000);
     };
   
     const handleNextQuestion = () => {
       if (currentQuestion === questions.length - 1) {
         navigation.navigate("Result", {correctAnswers, wrongAnswers});
       } else {
-        setCurrentQuestion((prevQuestion) => prevQuestion + 1);
-        setSelectedAnswer(null);
+        setCurrentQuestion((prevQuestion) => {
+          if (prevQuestion < questions.length - 1) {
+            setSelectedAnswer(null);
+            return prevQuestion + 1;
+          } else {
+            return prevQuestion;
+          }
+        });
       }
-    };
+    };    
 
     return (
         <View>

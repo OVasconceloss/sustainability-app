@@ -24,43 +24,33 @@ export default function NewsScreen() {
         <View>
         <View style={[newsStyle.newsStyleLine]}></View>
         <Text style={[newsStyle.mainNewsTitle]}>Focus on Net-Zero Emissions</Text>
-        <Text style={[newsStyle.mainNewsSubtitle]}>
-            Goal
-        </Text>
-        <Text style={[newsStyle.mainNewsText]}>
+        <View style={{marginVertical: 20}}>
+          <Text style={[newsStyle.mainNewsSubtitle]}>Goal</Text>
+          <Text style={[newsStyle.mainNewsText]}>
             Achieving net-zero emissions means balancing the amount of greenhouse gases released into the atmosphere with the amount removed. 
             This typically involves reducing emissions significantly and offsetting any remaining emissions through measures like carbon 
             capture and storage (CCS) or tree planting.
-        </Text>
-        <Text style={[newsStyle.mainNewsSubtitle]}>
-            Significance
-        </Text>
-        <Text style={[newsStyle.mainNewsText]}>
+          </Text>
+        </View>
+        <View style={{marginVertical: 20}}>
+          <Text style={[newsStyle.mainNewsSubtitle]}>Significance</Text>
+          <Text style={[newsStyle.mainNewsText]}>
             Reaching net-zero emissions by 2050 is a critical target set by the Paris Agreement to limit global warming to well below 2 
             degrees Celsius, ideally 1.5 degrees Celsius, compared to pre-industrial levels. This helps prevent the worst impacts of 
             climate change.
-        </Text>
-        <Text style={[newsStyle.mainNewsSubtitle]}>
-            Challenges
-        </Text>
-        <Text style={[newsStyle.mainNewsText]}>
+          </Text>
+        </View>
+        <View style={{marginVertical: 20}}>
+          <Text style={[newsStyle.mainNewsSubtitle]}>Challenges</Text>
+          <Text style={[newsStyle.mainNewsText]}>
             Shifting to a net-zero economy requires significant transformations in various sectors. This includes transitioning from 
             fossil fuels to renewable energy sources like solar and wind power, electrifying transportation, and developing cleaner 
             industrial processes.
-        </Text>
-        <Text style={[newsStyle.mainNewsSubtitle]}>
-            Challenges
-        </Text>
-        <Text style={[newsStyle.mainNewsText]}>
-            Shifting to a net-zero economy requires significant transformations in various sectors. This includes transitioning from 
-            fossil fuels to renewable energy sources like solar and wind power, electrifying transportation, and developing cleaner 
-            industrial processes.
-        </Text>
+          </Text>
+        </View>
         <View style={[newsStyle.space]}></View>
       </View>
       </ScrollView>
-      
-
       {/* FOOTER */}
       <FooterMenu />
       </View>

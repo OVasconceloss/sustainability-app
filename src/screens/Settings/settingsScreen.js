@@ -15,6 +15,7 @@ export default function SettingsScreen() {
   
   return(
     <>
+    <View style={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', backgroundColor: '#F5F7F8'}}>
       {/* HEADER */}
       <View style={settingsStyle.headerSettings}>
         <View style={[settingsStyle.headerSettingsTitle]}>
@@ -25,12 +26,13 @@ export default function SettingsScreen() {
       <View>
           <View>
             <View>
-              <DropdownChoice label="Language" options={languageOptions} />
+              <DropdownChoice label="Mode" options={languageOptions} />
             </View>
           </View>
       </View>
       {/* FOOTER */}
       <FooterMenu />
+      </View>
       </>
    );
 };

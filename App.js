@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import QuizzScreen from "./src/screens/Quizz/quizzScreen";
 import ProfileScreen from "./src/screens/Profile/profileScreen";
+import NewsScreen from "./src/screens/News/newsScreen";
 import SettingsScreen from "./src/screens/Settings/settingsScreen";
 import QuestionsScreen from "./src/screens/Quizz/questionsScreen";
 
@@ -36,6 +37,11 @@ export default function App() {
         <Stack.Screen
           name="Questions"
           component={QuestionsScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="News"
+          component={NewsScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

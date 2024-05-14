@@ -68,14 +68,21 @@ export default function QuestionsScreen() {
     const [correctAnswers, setCorrectAnswers] = useState([]);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const [answeredQuestions, setAnsweredQuestions] = useState([]);
   
     const handleAnswer = (answer) => {
+      if (answeredQuestions.includes(currentQuestion)) {
+        return;
+      }
       setSelectedAnswer(answer);
+    
       if (answer === questions[currentQuestion].correctAnswer) {
         setCorrectAnswers([...correctAnswers, currentQuestion]);
       } else {
         setWrongAnswers([...wrongAnswers, currentQuestion]);
       }
+    
+      setAnsweredQuestions([...answeredQuestions, currentQuestion]);
       setTimeout(handleNextQuestion, 1000);
     };
   

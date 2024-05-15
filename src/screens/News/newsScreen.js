@@ -2,6 +2,7 @@ import React from "react";
 import {
   View,
   Text,
+  Image,
   ScrollView,
 } from "react-native";
 import newsStyle from "../../styles/newsStyle";
@@ -22,6 +23,22 @@ export default function NewsScreen() {
       {/* MAIN */}
       <ScrollView>
         <View>
+        <Text style={{padding: 10, fontSize: 30, textAlign: 'center'}}>General Content</Text>
+        <Image source={require('../../../assets/images/News/content_image_1.jpg')} resizeMode="contain" style={{width: 300, height: 300, margin: 'auto', aspectRatio: 1, borderRadius: 10}} />
+        <Text style={{padding: 20, fontSize: 18, textAlign: 'justify'}}>
+          Sustainability is the ability to meet our needs in the present without compromising the ability
+          of future generations to meet their own needs. Historically, the concept of sustainability is linked to
+          the struggle for social justice, conservationism, internationalism, and other movements of the past. At the end 
+          of the 20th century, these ideas culminated in the so-called "sustainable development".
+        </Text>
+        <Image source={require('../../../assets/images/News/image_content_2.png')} resizeMode="contain" style={{width: 300, height: 300, margin: 'auto', aspectRatio: 1, borderRadius: 10}} />
+        <Text style={{padding: 20, fontSize: 18, textAlign: 'justify'}}>
+          Why is this so? Because it is a growing demand from their various stakeholders - customers, investors, regulators and employees - 
+          and because it contributes to their operational efficiency, risk management and positive differentiation from competitors, among other stakeholders.
+          The rapid depletion of natural resources, the impacts that human activity has on ecosystems and the biosphere, the high levels of social 
+          inequality and poverty we face, and the lack of ethics in corporate management are all enemies of a sustainable development model, capable 
+          of guaranteeing future generations the opportunities and quality of life that current generations (still) enjoy.
+        </Text>
         <View style={[newsStyle.newsStyleLine]}></View>
         <Text style={[newsStyle.mainNewsTitle]}>Focus on Net-Zero Emissions</Text>
         <View style={{marginVertical: 20}}>

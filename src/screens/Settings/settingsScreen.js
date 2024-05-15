@@ -8,11 +8,6 @@ import FooterMenu from "../../components/FooterMenu/footerMenu";
 import DropdownChoice from "../../components/DropDownChoices/dropdownChoice";
 
 export default function SettingsScreen() {
-  const languageOptions = [
-    { label: 'English', value: 'en' },
-    { label: 'Português', value: 'pt' },
-  ];
-  
   return(
     <>
     <View style={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', backgroundColor: '#F5F7F8'}}>
@@ -24,11 +19,6 @@ export default function SettingsScreen() {
       </View>
       {/* MAIN */}
       <View style={{display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'space-between'}}>
-          <View>
-            <View style={{display: 'flex', alignItems: 'center'}}>
-              <DropdownChoice label="Language" options={languageOptions} />
-            </View>
-          </View>
           <View style={{display: 'flex', padding: 10, alignItems: 'center', justifyContent: 'center'}}>
             <Text style={{fontSize: 40}}>Credits</Text>
             <View style={{display: 'flex', marginTop: 20, alignItems: 'center', justifyContent: 'center'}}>

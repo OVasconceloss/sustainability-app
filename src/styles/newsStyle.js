@@ -24,14 +24,14 @@ const newsStyle = StyleSheet.create({
     justifyContent: 'space-between'
   },
   newsStyleLine: {
-    borderColor: '#444444', 
-    borderWidth: 1, 
+    borderColor: '#rgba(0, 0, 0, 0.200)', 
+    borderWidth: 0.5, 
     borderStartWidth: 350,
     marginHorizontal: 10,
   },
   mainNewsTitle: {
     padding: 5,
-    fontSize: 25,
+    fontSize: 30,
     color: '#097d34',
     textAlign: 'center',
     backgroundColor: '#cae3d3',
@@ -51,7 +51,8 @@ const newsStyle = StyleSheet.create({
     display: 'flex', 
     alignItems: 'center',
     padding: 10,
-    fontSize: 15,
+    fontSize: 18,
+    textAlign: 'justify',
     color: '#000000',
     backgroundColor: '#cae3d3',
     borderColor: '#097d34',

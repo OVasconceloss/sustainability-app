@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "sustainability-app",
+    "name": "Earth: Sustainability",
     "slug": "sustainability-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/App/Earth_App_logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/App/Earth_App_logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

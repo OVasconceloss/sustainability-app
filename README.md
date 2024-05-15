@@ -19,8 +19,10 @@
 <hr>
 
 <div align="center">
-    <img src="./assets/images/Readme/Phone_Image_1.jpg" alt="Project Image">
-    <img src="./assets/images/Readme/Phone_Image_2.jpg" alt="Project Image">
+    <img src="./assets/images/Readme/Phone_Image_1.jpg" alt="Project Image" width="200">
+    <img src="./assets/images/Readme/Phone_Image_2.jpg" alt="Project Image" width="200">
+    <img src="./assets/images/Readme/Phone_Image_3.jpg" alt="Project Image" width="200">
+    <img src="./assets/images/Readme/Phone_Image_4.jpg" alt="Project Image" width="200">
 </div>
 
 <hr>

@@ -23,10 +23,26 @@ export default function SettingsScreen() {
         </View>
       </View>
       {/* MAIN */}
-      <View>
+      <View style={{display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'space-between'}}>
           <View>
-            <View>
-              <DropdownChoice label="Mode" options={languageOptions} />
+            <View style={{display: 'flex', alignItems: 'center'}}>
+              <DropdownChoice label="Language" options={languageOptions} />
+            </View>
+          </View>
+          <View style={{display: 'flex', padding: 10, alignItems: 'center', justifyContent: 'center'}}>
+            <Text style={{fontSize: 40}}>Credits</Text>
+            <View style={{display: 'flex', marginTop: 20, alignItems: 'center', justifyContent: 'center'}}>
+              <Text style={{fontSize: 25, marginTop: 20}}>João Calixto</Text>
+              <Text style={{fontSize: 25, marginTop: 20}}>Hugo Calado</Text>
+              <Text style={{fontSize: 25, marginTop: 20}}>Daryna Novytska</Text>
+              <Text style={{fontSize: 25, marginTop: 20}}>Victor Vasconcelos</Text>
+            </View>
+          </View>
+          <View style={{display: 'flex', marginTop: 40, alignItems: 'center', justifyContent: 'center'}}>
+            <Text style={{fontSize: 35}}>School Information</Text>
+            <View style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <Text style={{fontSize: 25, marginTop: 20}}>2ºK | English | 2024</Text>
+              <Text style={{fontSize: 25, marginTop: 20}}>Escola Secundária de Santo André</Text>
             </View>
           </View>
       </View>
